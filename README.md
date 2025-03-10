@@ -6,8 +6,6 @@
 
 `SEMESTRE: 3º`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
-
 ## Integrantes
 
 * ALLAN DOS ANJOS VIANA
