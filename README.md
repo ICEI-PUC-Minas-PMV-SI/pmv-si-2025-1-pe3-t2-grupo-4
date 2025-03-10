@@ -1,4 +1,4 @@
-# Título do Projeto
+# STREAMING DE LIVROS COMO MEIO DE DEMOCRATIZAÇÃO DE ACESSO A LEITURA: ANÁLISE DA IMPLEMENTAÇÃO DE PLATAFORMA
 
 `CURSO: Sistemas de Informação`
 
@@ -10,16 +10,16 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 5
-* Nome completo do aluno 6
+* ALLAN DOS ANJOS VIANA
+* DANILO LEAL RAUL
+* JOÃO DE SOUSA LOURENÇO
+* MARCO TULIO CRECENCIO ARAUJO
+* MARIANA CARVALHO SILVA RIBEIRO
+* RODRIGO CARVALHO CATTOI DA COSTA
 
 ## Orientador
 
-* Nome completo do professor 
+* Maria Inês Lages de Paula 
 
 # Planejamento
 
