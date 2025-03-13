@@ -17,7 +17,7 @@
 
 ## Orientador
 
-* Maria Inês Lages de Paula 
+* Maria Inês Lage de Paula 
 
 # Planejamento
 
