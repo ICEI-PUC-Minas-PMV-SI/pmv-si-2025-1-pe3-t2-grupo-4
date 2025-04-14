@@ -82,8 +82,7 @@ O Leitura Livre não oferece nenhuma forma de download dos livros, sendo o acess
 Como observado no diagrama de casos de uso da Figura 1, a secretária poderá gerenciar as matrículas e professores no sistema, enquanto o coordenador, além dessas funções, poderá gerenciar os cursos de aperfeiçoamento.
 
 #### Figura 1: Diagrama de Casos de Uso do Sistema.
-
-![dcu](https://github.com/user-attachments/assets/41f6b731-b44e-43aa-911f-423ad6198f47)
+![diagrama casos uso](https://github.com/user-attachments/assets/56abd516-a142-4f7f-b41c-c7e418bcedd3)
  
 ### 3.4.2 Descrições de Casos de Uso
 
@@ -229,8 +228,7 @@ A Figura 2 mostra o diagrama de classes do sistema. A Matrícula deve conter a i
 
 #### Figura 2: Diagrama de Classes do Sistema.
  
-![image](https://github.com/user-attachments/assets/abc7591a-b46f-4ea2-b8f0-c116b60eb24e)
-
+![diagrama classes](https://github.com/user-attachments/assets/8367e733-0d1e-4bff-b795-56cf7d377305)
 
 ### 3.4.4 Descrições das Classes 
 
