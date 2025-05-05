@@ -1,10 +1,12 @@
 # 2. ESTADO DA ARTE
-O estado da arte é um mapeamento de toda a produção acadêmica sobre um assunto específico, aqui especificamente sobre o tema escolhido para o seu trabalho. A ideia consiste em reunir as conclusões que outras pesquisas científicas chegaram sobre um determinado assunto. Neste momento você deverá buscar respostas para as seguintes perguntas:
 
-1.	Quais pesquisas estão sendo desenvolvidas sobre esse tema?
-2.	Quem está pesquisando e onde?
-3.	O que as atuais pesquisas científicas concluíram sobre o tema? 
-4.	Quais as divergências dos pesquisadores sobre o assunto? 
-5.	Quais aspectos carecem de maior abordagem?
+O avanço das tecnologias digitais tem impulsionado o desenvolvimento de plataformas de livros gratuitos, promovendo maior acessibilidade ao conhecimento e democratizando o acesso à informação. Pesquisas recentes analisam diferentes aspectos desse fenômeno, abordando desde a implementação tecnológica até os desafios enfrentados para garantir a sustentabilidade dessas iniciativas. Segundo Paulo (2022), a digitalização de acervos e a criação de plataformas de acesso aberto têm sido foco de estudos na área de Sistemas de Informação, principalmente em universidades e centros de pesquisa voltados para Ciência da Informação e Engenharia de Software.
 
-É importante referenciar estas pesquisas, fazendo as devidas citações de acordo com as normas da ABNT e colocando as referências completas ao final do trabalho.
+As pesquisas sobre o tema estão sendo desenvolvidas em diversas instituições acadêmicas, tanto no Brasil quanto no exterior. O estudo de Souza e Santos (2022) destaca que universidades brasileiras têm desempenhado um papel fundamental na análise e implementação de repositórios digitais, contribuindo para o avanço das plataformas de livros gratuitos. Além disso, iniciativas internacionais, como as da Open Library e da Digital Public Library of America, são frequentemente citadas como referência no desenvolvimento dessas soluções tecnológicas.
+
+Os estudos atuais convergem para a conclusão de que plataformas de livros digitais gratuitos desempenham um papel essencial na ampliação do acesso à informação, especialmente em contextos acadêmicos e educacionais. Souza e Santos (2022) ressaltam que a utilização de tecnologias como inteligência artificial e big data pode otimizar a experiência do usuário, personalizando recomendações de leitura e aprimorando a navegabilidade das plataformas. 
+
+Além disso, Paulo (2022) enfatiza a importância da interoperabilidade entre sistemas, permitindo a integração de bibliotecas digitais e ampliando o alcance dessas iniciativas.
+No entanto, há divergências entre os pesquisadores quanto aos modelos de financiamento e à viabilidade de longo prazo dessas plataformas. Enquanto alguns estudos defendem a adoção de parcerias institucionais e financiamento público para garantir a sustentabilidade dos projetos, outros argumentam que modelos híbridos, com publicidade ou serviços pagos opcionais, podem ser mais eficientes (PAULO, 2022). Outra questão debatida é a proteção dos direitos autorais, visto que a disponibilização gratuita de livros muitas vezes enfrenta desafios legais e restrições impostas pelas editoras (SOUZA; SANTOS, 2022).
+
+Entre os aspectos que carecem de maior abordagem, destaca-se a necessidade de estudos sobre segurança da informação e privacidade dos usuários em plataformas de acesso aberto. Além disso, a implementação de tecnologias emergentes, como blockchain, para assegurar a autenticidade e a rastreabilidade das obras digitais, ainda é um campo pouco explorado. Dessa forma, o desenvolvimento de plataformas de livros gratuitos exige não apenas soluções tecnológicas inovadoras, mas também estratégias eficazes para garantir sua sustentabilidade e conformidade legal.
