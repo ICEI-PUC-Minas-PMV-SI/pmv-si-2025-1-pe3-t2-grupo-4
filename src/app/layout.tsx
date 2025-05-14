@@ -37,10 +37,19 @@ export default function RootLayout({
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Header />
-        <Grid container sx={{ backgroundColor: '#FCEBD5', minHeight: '100vh', display: "flex" }}>
-        <Sidebar /> 
-        {children}
-        </Grid>
+        {/* <Grid container sx={{ backgroundColor: '#FCEBD5', minHeight: '100vh', display: "flex" }}> */}
+        <Box
+          sx={{
+            display: "flex",
+            backgroundColor: "#FCEBD5",
+            minHeight: "100vh",
+            paddingLeft: 6,
+          }}
+        >
+          <Sidebar />
+          {children}
+        </Box>
+        {/* </Grid> */}
       </body>
     </html>
   );
