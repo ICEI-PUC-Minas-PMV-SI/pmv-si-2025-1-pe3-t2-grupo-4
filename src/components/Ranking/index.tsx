@@ -1,7 +1,7 @@
+import { EmojiEvents } from "@mui/icons-material";
 import {
   Box,
   Divider,
-  Grid,
   List,
   ListItem,
   ListItemText,
@@ -13,9 +13,16 @@ const Ranking = () => {
   return (
     <Box>
       <Paper sx={{ p: 2, borderRadius: 3 }}>
-        <Typography variant="h6" fontWeight="bold">
-          🏆 Top 10 por Categoria
+        <Typography
+          variant="h6"
+          fontWeight="bold"
+          display="flex"
+          gap={1}
+          alignItems="center"
+        >
+          <EmojiEvents /> Top 10 por Categoria <EmojiEvents />
         </Typography>
+        <Divider sx={{ my: 2 }} />
         <Box mt={2}>
           <Typography variant="subtitle2" fontWeight="bold">
             Ficção

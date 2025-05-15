@@ -1,4 +1,10 @@
-import { Search } from "@mui/icons-material";
+import {
+  AccountCircle,
+  Person,
+  Search,
+  SupervisedUserCircle,
+  VerifiedUser,
+} from "@mui/icons-material";
 import {
   Avatar,
   Box,
@@ -57,10 +63,12 @@ const Header = () => {
           bgcolor: "#F5A623",
           color: "#fff",
           width: "fit-content",
-          padding: "6px 3px",
-          borderRadius: 2,
+          padding: "8px 24px",
+          borderRadius: 5,
+          gap: 1,
         }}
       >
+        <AccountCircle />
         Usuário
       </Avatar>
     </Box>
