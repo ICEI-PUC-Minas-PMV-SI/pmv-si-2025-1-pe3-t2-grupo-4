@@ -24,11 +24,11 @@ const Hero = ({
       sx={{
         display: "flex",
         backgroundColor: "#fff",
-        padding: 3,
+        padding: { xs: 3, sm: 2 },
         borderRadius: 4,
       }}
     >
-      <Box sx={{ width: "40%", position: "relative" }}>
+      <Box sx={{ position: "relative" }}>
         <Image
           src="https://m.media-amazon.com/images/I/A1UjcPz4gZL._AC_UF1000,1000_QL80_.jpg"
           alt="Percy Jackson"
@@ -38,7 +38,6 @@ const Hero = ({
       </Box>
       <Box
         sx={{
-          width: "60%",
           paddingLeft: 3,
           display: "flex",
           flexDirection: "column",

@@ -48,6 +48,7 @@ const Header = () => {
               <Search />
             </InputAdornment>
           }
+          disableUnderline
           sx={{ backgroundColor: "#F0F0F0", padding: 1, borderRadius: 6 }}
         />
       </Box>
@@ -60,7 +61,7 @@ const Header = () => {
           borderRadius: 2,
         }}
       >
-        Mariana
+        Usuário
       </Avatar>
     </Box>
   );
