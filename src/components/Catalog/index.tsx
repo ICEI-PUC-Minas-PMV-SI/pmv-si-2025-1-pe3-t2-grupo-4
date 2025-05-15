@@ -1,4 +1,4 @@
-import { Button, Grid, Paper, Stack, Typography } from "@mui/material";
+import { Box, Button, Grid, Paper, Stack, Typography } from "@mui/material";
 
 const Catalog = () => {
   return (
@@ -18,31 +18,49 @@ const Catalog = () => {
         },
       ].map((book, i) => (
         <Grid key={i} size={6}>
-          <Paper elevation={3} sx={{ p: 2, borderRadius: 3 }}>
-            <Grid container spacing={1}>
-              <Grid>
-                <img
-                  src={book.img}
-                  alt={book.title}
-                  style={{ width: "100%", borderRadius: 8 }}
-                />
-              </Grid>
-              <Grid>
-                <Typography fontWeight="bold" fontSize={14}>
-                  {book.title}
-                </Typography>
-                <Typography variant="caption">{book.author}</Typography>
-                <Stack direction="row" spacing={1} mt={1}>
-                  <Button size="small" variant="contained" color="warning">
-                    Ler agora
-                  </Button>
-                  <Button size="small" variant="outlined">
-                    Salvar na lista
-                  </Button>
-                </Stack>
-              </Grid>
-            </Grid>
-          </Paper>
+          <Box key={i}>
+            <Paper elevation={3} sx={{ p: 2, borderRadius: 3 }}>
+              <Box sx={{ display: "flex", gap: 1 }}>
+                <Grid size={6}>
+                  <img
+                    src={book.img}
+                    alt={book.title}
+                    style={{
+                      width: 125,
+                      height: 200,
+                      objectFit: "cover",
+                      borderRadius: 8,
+                    }}
+                  />
+                </Grid>
+                <Grid size={6}>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "space-between",
+                      height: "100%",
+                    }}
+                  >
+                    <Box>
+                      <Typography fontWeight="bold" fontSize={14}>
+                        {book.title}
+                      </Typography>
+                      <Typography variant="caption">{book.author}</Typography>
+                    </Box>
+                    <Stack direction="column" spacing={2} mt={2} mb={6}>
+                      <Button size="small" variant="contained" color="warning">
+                        Ler agora
+                      </Button>
+                      <Button size="small" variant="outlined">
+                        Salvar na lista
+                      </Button>
+                    </Stack>
+                  </Box>
+                </Grid>
+              </Box>
+            </Paper>
+          </Box>
         </Grid>
       ))}
     </Grid>
