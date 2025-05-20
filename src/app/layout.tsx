@@ -4,10 +4,11 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
-import { Box, Grid, Modal } from '@mui/material';
+import { Box } from '@mui/material';
 import Sidebar from '@/components/Sidebar';
 import Register from '@/components/Forms/register';
 import Login from '@/components/Forms/login';
+import ForgotPassword from '@/components/Forms/forgotPassword';
 import { useState } from 'react';
 
 const geistSans = Geist({
@@ -35,7 +36,8 @@ export default function RootLayout({
 }>) {
   const [registerOpen, setregisterOpen] = useState(false);
   const [loginOpen, setloginOpen] = useState(false);
-  const user = null; // aqui você coloca sua lógica de autenticação
+  const [forgotPasswordOpen, setforgotPasswordOpen] = useState(false);
+  const user = null;
 
   return (
     <html lang='en'>
@@ -68,7 +70,15 @@ export default function RootLayout({
           </Box>
         </Box>
         <Register open={registerOpen} onClose={() => setregisterOpen(false)} />
-        <Login open={loginOpen} onClose={() => setloginOpen(false)} />
+        <Login
+          open={loginOpen}
+          onClose={() => setloginOpen(false)}
+          ForgotPasswordClick={() => setforgotPasswordOpen(true)}
+        />
+        <ForgotPassword
+          open={forgotPasswordOpen}
+          onClose={() => setforgotPasswordOpen(false)}
+        />
       </body>
     </html>
   );

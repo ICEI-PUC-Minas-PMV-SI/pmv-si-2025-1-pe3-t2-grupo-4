@@ -13,12 +13,17 @@ import CloseIcon from '@mui/icons-material/Close';
 import { useState } from 'react';
 import styles from '../../app/page.module.css';
 
-interface RegisterProps {
+interface LoginProps {
   open: boolean;
   onClose: (event: {}, reason: 'backdropClick' | 'escapeKeyDown') => void;
+  ForgotPasswordClick: () => void;
 }
 
-export default function Login({ open, onClose }: RegisterProps) {
+export default function Login({
+  open,
+  onClose,
+  ForgotPasswordClick,
+}: LoginProps) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -34,6 +39,11 @@ export default function Login({ open, onClose }: RegisterProps) {
     backgroundColor: '#FFEEDA',
     borderRadius: 8,
   };
+  const handleForgotPassword = () => {
+    console.log('Esqueci minha senha clicado');
+    onClose({}, 'backdropClick');
+    ForgotPasswordClick();
+  };
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
@@ -45,7 +55,6 @@ export default function Login({ open, onClose }: RegisterProps) {
 
     // Aqui você pode adicionar a lógica de autenticação
   };
-  const handleForgotPassword = () => {};
 
   return (
     <Modal open={open} onClose={onClose}>
@@ -56,7 +65,12 @@ export default function Login({ open, onClose }: RegisterProps) {
           alignItems='center'
           mb={3}
         >
-          <Typography variant='h5' textAlign='center' color='Black'>
+          <Typography
+            variant='h5'
+            textAlign='center'
+            color='Black'
+            fontWeight='bold'
+          >
             Login
           </Typography>
           <IconButton onClick={(event) => onClose(event, 'backdropClick')}>
@@ -95,7 +109,7 @@ export default function Login({ open, onClose }: RegisterProps) {
             onClick={handleForgotPassword}
             underline='hover'
           >
-            Forgot password?
+            Esqueci minha senha
           </Link>
 
           <Button
