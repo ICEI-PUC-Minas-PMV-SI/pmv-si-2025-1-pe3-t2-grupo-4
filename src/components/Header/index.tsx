@@ -1,24 +1,16 @@
-'use client';
-import {
-  AccountCircle,
-  Login,
-  Person,
-  Search,
-  SupervisedUserCircle,
-  VerifiedUser,
-} from '@mui/icons-material';
+"use client";
+
+import { AccountCircle, Search } from "@mui/icons-material";
+
 import {
   Avatar,
   Box,
   Button,
   Input,
   InputAdornment,
-  TextField,
   Typography,
-} from '@mui/material';
-import Image from 'next/image';
-import { useState } from 'react';
-import Register from '../Forms/register';
+} from "@mui/material";
+import Image from "next/image";
 
 interface UserMenuProps {
   user: { name: string; avatarUrl?: string } | null;
@@ -36,53 +28,58 @@ const Header = ({
   return (
     <Box
       sx={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
         px: 4,
         py: 2,
-        backgroundColor: '#fff',
+        backgroundColor: "#fff",
         zIndex: 1000,
       }}
     >
-      <Box display='flex' alignItems='center' gap={1}>
+      <Box display="flex" alignItems="center" gap={1}>
         <Box>
           <Image
-            src='https://cdn-icons-png.flaticon.com/512/29/29302.png'
-            alt='Logo'
+            src="https://cdn-icons-png.flaticon.com/512/29/29302.png"
+            alt="Logo"
             width={32}
             height={32}
           />
         </Box>
 
-        <Box>
-          <Typography fontWeight='bold' color='#B35E00'>
-            Leitura Livre
+        <Box sx={{ display: "flex", flexDirection: "column" }}>
+          <Typography fontWeight="bold" color="#B35E00">
+            Leitura
           </Typography>
-          <Typography fontWeight='bold' variant='h5' color='secondary'>
-            Leitura Livre
+          <Typography
+            fontWeight="bold"
+            variant="h5"
+            color="secondary"
+            lineHeight={1}
+          >
+            Livre
           </Typography>
         </Box>
       </Box>
       <Box>
         <Input
-          id='input-with-icon-adornment'
+          id="input-with-icon-adornment"
           startAdornment={
-            <InputAdornment position='start'>
+            <InputAdornment position="start">
               <Search />
             </InputAdornment>
           }
           disableUnderline
-          sx={{ backgroundColor: '#F0F0F0', padding: 1, borderRadius: 6 }}
+          sx={{ backgroundColor: "#F0F0F0", padding: 1, borderRadius: 6 }}
         />
       </Box>
       {user ? (
         <Avatar
           sx={{
-            bgcolor: '#F5A623',
-            color: '#fff',
-            width: 'fit-content',
-            padding: '8px 24px',
+            bgcolor: "#F5A623",
+            color: "#fff",
+            width: "fit-content",
+            padding: "8px 24px",
             borderRadius: 5,
             gap: 1,
           }}
@@ -92,17 +89,17 @@ const Header = ({
         </Avatar>
       ) : (
         <>
-          <Box gap={2} display='flex'>
+          <Box gap={2} display="flex">
             <Button
-              sx={{ bgcolor: '#F5A623' }}
-              variant='contained'
+              sx={{ bgcolor: "#F5A623" }}
+              variant="contained"
               onClick={onLoginClick}
             >
               Login
             </Button>
             <Button
-              sx={{ bgcolor: '#F5A623' }}
-              variant='contained'
+              sx={{ bgcolor: "#F5A623" }}
+              variant="contained"
               onClick={onRegisterClick}
             >
               Cadastro

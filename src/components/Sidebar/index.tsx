@@ -3,7 +3,6 @@ import { Box, IconButton } from "@mui/material";
 
 const Sidebar = () => {
   return (
-    // <Grid item xs={1.5}>
     <Box
       sx={{
         display: "flex",
@@ -27,7 +26,6 @@ const Sidebar = () => {
         <Bookmark />
       </IconButton>
     </Box>
-    //  </Grid>
   );
 };
 
