@@ -27,12 +27,13 @@ function App() {
     >
       <Box sx={{ maxWidth: 768 }}>
         <Hero
-          title="Percy Jackson"
-          subtitle="A coletânea Percy Jackson e os Olimpianos acompanha um adolescente que descobre ser filho de um deus grego que, entre monstros, profecias e heróis, ele precisa salvar o mundo moderno da fúria dos deuses antigos."
+          title={BOOKS[0].title}
+          subtitle={BOOKS[0].description}
+          imageAlt={BOOKS[0].title}
+          imageSrc={BOOKS[0].img}
         />
         <LastRead books={BOOKS.slice(0, 5)} selectedGenre={selectedGenre} />
         <Filters
-          genres={genres}
           selectedGenre={selectedGenre}
           handleSelectedGenre={handleSelectedGenre}
         />

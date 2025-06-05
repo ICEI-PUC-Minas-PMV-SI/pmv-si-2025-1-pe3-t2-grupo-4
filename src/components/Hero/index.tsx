@@ -29,12 +29,7 @@ const Hero = ({
       }}
     >
       <Box sx={{ position: "relative" }}>
-        <Image
-          src="https://m.media-amazon.com/images/I/A1UjcPz4gZL._AC_UF1000,1000_QL80_.jpg"
-          alt="Percy Jackson"
-          height={360}
-          width={256}
-        />
+        <Image src={imageSrc ?? ""} alt={imageAlt} height={360} width={256} />
       </Box>
       <Box
         sx={{
