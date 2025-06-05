@@ -1,10 +1,13 @@
 import { Box, Button, Grid, Paper, Stack, Typography } from "@mui/material";
+import { useRouter } from "next/navigation";
 
 type Book = {
+  id: string;
   title: string;
   author: string;
   genre: string;
   img: string;
+  file: string;
 };
 
 type Props = {
@@ -13,6 +16,8 @@ type Props = {
 };
 
 const Catalog = ({ books, selectedGenre }: Props) => {
+  const router = useRouter();
+
   return (
     <Grid
       container
@@ -57,16 +62,22 @@ const Catalog = ({ books, selectedGenre }: Props) => {
                         </Typography>
                         <Typography variant="caption">{book.author}</Typography>
                       </Box>
-                      <Stack direction="column" spacing={2} mt={2} mb={6}>
+                      <Stack direction="column" mb={1}>
                         <Button
                           size="small"
                           variant="contained"
                           color="warning"
+                          onClick={() =>
+                            router.push(`/leitura?bookId=${book.id}`)
+                          }
+                          sx={{
+                            borderRadius: 2,
+                            "&:hover": {
+                              bgcolor: "warning.dark",
+                            },
+                          }}
                         >
                           Ler agora
-                        </Button>
-                        <Button size="small" variant="outlined">
-                          Salvar na lista
                         </Button>
                       </Stack>
                     </Box>

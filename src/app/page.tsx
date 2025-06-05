@@ -5,8 +5,9 @@ import { Box } from "@mui/material";
 import Hero from "@/components/Hero";
 import Filters from "@/components/Filters";
 import Catalog from "@/components/Catalog";
-import Ranking from "@/components/Ranking";
+import Ranking from "@/components/Recommended";
 import LastRead from "@/components/LastRead";
+import { BOOKS } from "@/utils/constants";
 
 function App() {
   const genres = ["Todos", "Suspense", "Drama", "Ficção"];
@@ -15,33 +16,6 @@ function App() {
   const handleSelectedGenre = (genre: string) => {
     setSelectedGenre(genre);
   };
-
-  const catalogItems = [
-    {
-      title: "A menina que roubava livros",
-      author: "Markus Zusak",
-      genre: "Drama",
-      img: "https://m.media-amazon.com/images/I/61L+4OBhm-L.jpg",
-    },
-    {
-      title: "Biblioteca da Meia-Noite",
-      author: "CS Lewis",
-      genre: "Ficção",
-      img: "https://m.media-amazon.com/images/I/81t2CVWEsUL.jpg",
-    },
-    {
-      title: "O Senhor dos Anéis",
-      author: "J.R.R. Tolkien",
-      genre: "Ficção",
-      img: "https://m.media-amazon.com/images/I/81KGUQ+PMgL._AC_UF1000,1000_QL80_.jpg",
-    },
-    {
-      title: "O Código Da Vinci",
-      author: "Dan Brown",
-      genre: "Suspense",
-      img: "https://m.media-amazon.com/images/I/91QSDmqQdaL._AC_UF1000,1000_QL80_.jpg",
-    },
-  ];
 
   return (
     <Box
@@ -56,16 +30,13 @@ function App() {
           title="Percy Jackson"
           subtitle="A coletânea Percy Jackson e os Olimpianos acompanha um adolescente que descobre ser filho de um deus grego que, entre monstros, profecias e heróis, ele precisa salvar o mundo moderno da fúria dos deuses antigos."
         />
-        <LastRead
-          books={catalogItems.slice(0, 5)}
-          selectedGenre={selectedGenre}
-        />
+        <LastRead books={BOOKS.slice(0, 5)} selectedGenre={selectedGenre} />
         <Filters
           genres={genres}
           selectedGenre={selectedGenre}
           handleSelectedGenre={handleSelectedGenre}
         />
-        <Catalog books={catalogItems} selectedGenre={selectedGenre} />
+        <Catalog books={BOOKS} selectedGenre={selectedGenre} />
       </Box>
       <Ranking />
     </Box>

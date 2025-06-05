@@ -2,12 +2,15 @@ import { Box, Button, Grid, Paper, Stack, Typography } from "@mui/material";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { useRouter } from "next/navigation";
 
 type Book = {
+  id: string;
   title: string;
   author: string;
   genre: string;
   img: string;
+  file: string;
 };
 
 type Props = {
@@ -16,6 +19,8 @@ type Props = {
 };
 
 const LastRead = ({ books, selectedGenre }: Props) => {
+  const router = useRouter();
+
   return (
     <Box sx={{ display: "flex", flexDirection: "column", gap: 0 }}>
       <Typography
@@ -52,7 +57,12 @@ const LastRead = ({ books, selectedGenre }: Props) => {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
+                cursor: "pointer",
+                "&:hover": {
+                  boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.1) ",
+                },
               }}
+              onClick={() => router.push(`/leitura?bookId=${book.id}`)}
             >
               <img
                 src={book.img}
