@@ -17,7 +17,7 @@ export const BOOKS = [
       "Uma epopeia que narra as aventuras dos navegadores portugueses, Os Lusíadas é um marco da literatura épica portuguesa.",
     genre: "Ficção",
     img: "https://m.media-amazon.com/images/I/91ltylqzzdL.jpg",
-    file: "dom-casmurro-machado-de-assis.pdf",
+    file: "os-lusiadas-luis-de-camoes.pdf",
   },
   {
     id: "5fc45abf-3fbb-4325-b6c5-18e199c37bfd",
@@ -27,7 +27,7 @@ export const BOOKS = [
     author: "Jane Austen",
     genre: "Ficção",
     img: "https://m.media-amazon.com/images/I/81gOkEhzgIL._UF894,1000_QL80_.jpg",
-    file: "dom-casmurro-machado-de-assis.pdf",
+    file: "orgulho-e-preconceito-jane-austen.pdf",
   },
   {
     id: "790994bf-082a-4e53-898d-80d180475ddc",
@@ -37,7 +37,7 @@ export const BOOKS = [
       "Uma obra-prima da literatura mundial, A Divina Comédia é uma alegoria da jornada da alma em direção a Deus.",
     genre: "Suspense",
     img: "https://m.media-amazon.com/images/I/818Hap7wCcL._UF894,1000_QL80_.jpg",
-    file: "dom-casmurro-machado-de-assis.pdf",
+    file: "a-divina-comedia-dante-alighieri.pdf",
   },
   {
     id: "5e6f7g8h-9i10-jk11-lm12-no13pq14rs15",
@@ -47,7 +47,7 @@ export const BOOKS = [
       "Obra política clássica sobre poder, estratégias de governo e realismo político.",
     genre: "Política",
     img: "https://m.media-amazon.com/images/I/81h4CdNxdgL.jpg",
-    file: "o-principe-nicolau-maquiavel.pdf",
+    file: "o-principe-maquiavel.pdf",
   },
   {
     id: "6f7g8h9i-10jk-11lm-12no-13pq14rs15tu",
@@ -57,7 +57,7 @@ export const BOOKS = [
       "História de um pacto com o diabo em troca de conhecimento e prazeres terrenos.",
     genre: "Tragédia",
     img: "https://m.media-amazon.com/images/I/717wY1q7YaL._UF894,1000_QL80_.jpg",
-    file: "fausto-johann-wolfgang-von-goethe.pdf",
+    file: "fausto-goethe.pdf",
   },
   {
     id: "7g8h9i10-jk11-lm12-no13-pq14rs15tu16",
@@ -97,6 +97,6 @@ export const BOOKS = [
       "Base do espiritismo, com perguntas e respostas sobre a alma, a vida após a morte e as leis morais.",
     genre: "Espiritualidade",
     img: "https://m.media-amazon.com/images/I/61Ak1rIl2QL._AC_UF1000,1000_QL80_.jpg",
-    file: "o-livro-dos-espiritos-allan-kardec.pdf",
+    file: "livro-dos-espiritos-allan-kardec.pdf",
   },
 ];
