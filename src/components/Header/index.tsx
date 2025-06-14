@@ -11,6 +11,7 @@ import {
   Typography,
 } from "@mui/material";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 interface UserMenuProps {
   user: { name: string; avatarUrl?: string } | null;
@@ -25,6 +26,8 @@ const Header = ({
   onRegisterClick: () => void;
   onLoginClick: () => void;
 }) => {
+  const router = useRouter();
+
   return (
     <Box
       sx={{
@@ -37,7 +40,13 @@ const Header = ({
         zIndex: 1000,
       }}
     >
-      <Box display="flex" alignItems="center" gap={1}>
+      <Box
+        display="flex"
+        alignItems="center"
+        gap={1}
+        onClick={() => router.push("/")}
+        sx={{ cursor: "pointer" }}
+      >
         <Box>
           <Image
             src="https://cdn-icons-png.flaticon.com/512/29/29302.png"

@@ -1,8 +1,10 @@
 import React from "react";
 import { Typography, Button, Grid, Stack, Chip, Box } from "@mui/material";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 type HeroProps = {
+  bookId: string;
   title: string;
   subtitle?: string;
   ctaText?: string;
@@ -12,6 +14,7 @@ type HeroProps = {
 };
 
 const Hero = ({
+  bookId,
   title,
   subtitle,
   ctaText = "Saiba mais",
@@ -19,6 +22,8 @@ const Hero = ({
   imageSrc,
   imageAlt = "Imagem de destaque",
 }: HeroProps) => {
+  const router = useRouter();
+
   return (
     <Box
       sx={{
@@ -39,10 +44,6 @@ const Hero = ({
           justifyContent: "space-between",
         }}
       >
-        <Stack direction="row" spacing={1} width="100%">
-          <Chip label="Chega em Breve" color="default" sx={{ width: "50%" }} />
-          <Chip label="Novo de Hoje" color="warning" sx={{ width: "50%" }} />
-        </Stack>
         <Box sx={{ height: "100%" }}>
           <Typography variant="h5" fontWeight="bold" mt={1} color="#3C3C3C">
             {title}
@@ -65,17 +66,32 @@ const Hero = ({
           </Typography>
         </Box>
 
-        <Button
-          variant="contained"
-          sx={{
-            mt: 2,
-            bgcolor: "#F5A623",
-            borderRadius: 6,
-            textTransform: "unset",
-          }}
-        >
-          Mais informações
-        </Button>
+        <Stack direction="column" mb={1}>
+          <Button
+            variant="contained"
+            color="warning"
+            onClick={() => router.push(`/leitura?bookId=${bookId}`)}
+            sx={{
+              borderRadius: 6,
+              "&:hover": {
+                bgcolor: "warning.dark",
+              },
+            }}
+          >
+            Ler agora
+          </Button>
+          <Button
+            variant="contained"
+            sx={{
+              mt: 2,
+              bgcolor: "#F5A623",
+              borderRadius: 6,
+              textTransform: "unset",
+            }}
+          >
+            Mais informações
+          </Button>
+        </Stack>
       </Box>
     </Box>
   );

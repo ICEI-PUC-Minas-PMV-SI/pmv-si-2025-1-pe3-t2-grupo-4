@@ -20,6 +20,8 @@ import ZoomInIcon from "@mui/icons-material/ZoomIn";
 import ZoomOutIcon from "@mui/icons-material/ZoomOut";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import { Announcement, Note, Notes } from "@mui/icons-material";
+import Annotation from "../Forms/Annotation";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `${process.env.NEXT_PUBLIC_URL}/pdf.worker.min.mjs`;
 
@@ -38,6 +40,7 @@ const PdfReader = ({ pdfUrl }: PdfReaderProps) => {
   const [backgroundColor, setBackgroundColor] = useState<string>(
     theme.palette.grey[100],
   );
+  const [openAnnotation, setOpenAnnotation] = useState(false);
 
   const [sepiaMode, setSepiaMode] = useState<boolean>(false);
   const [invertedMode, setInvertedMode] = useState<boolean>(false);
@@ -164,6 +167,22 @@ const PdfReader = ({ pdfUrl }: PdfReaderProps) => {
           alignItems="center"
           sx={{ maxWidth: "900px" }}
         >
+          <Grid>
+            <Button
+              variant="outlined"
+              onClick={() => setOpenAnnotation(!openAnnotation)}
+              sx={{
+                color:
+                  sepiaMode || invertedMode || overlayMode
+                    ? theme.palette.grey[200]
+                    : theme.palette.text.primary,
+                mr: 3,
+              }}
+              startIcon={<Notes />}
+            >
+              Anotações
+            </Button>
+          </Grid>
           <Grid>
             <FormControlLabel
               control={
@@ -362,6 +381,10 @@ const PdfReader = ({ pdfUrl }: PdfReaderProps) => {
           </Typography>
         )}
       </Box>
+      <Annotation
+        open={openAnnotation}
+        onClose={() => setOpenAnnotation(false)}
+      />
     </Box>
   );
 };

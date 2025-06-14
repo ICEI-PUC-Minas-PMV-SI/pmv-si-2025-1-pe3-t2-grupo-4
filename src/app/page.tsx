@@ -29,6 +29,7 @@ function App() {
         <Hero
           title={BOOKS[0].title}
           subtitle={BOOKS[0].description}
+          bookId={BOOKS[0].id}
           imageAlt={BOOKS[0].title}
           imageSrc={BOOKS[0].img}
         />

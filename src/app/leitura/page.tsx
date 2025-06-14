@@ -1,9 +1,11 @@
 "use client";
 
+import Annotation from "@/components/Forms/Annotation";
 import PdfReader from "@/components/PdfReader";
 import { BOOKS } from "@/utils/constants";
 import { Box, Typography } from "@mui/material";
 import { useSearchParams } from "next/navigation";
+import { useState } from "react";
 
 const Leitura = () => {
   const searchParams = useSearchParams();
