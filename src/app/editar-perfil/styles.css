@@ -1,0 +1,215 @@
+.wrapper {
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+
+
+.brown {
+    color: #944916;
+}
+
+.blue {
+    color: #2f3f55;
+}
+
+.searchBox {
+    display: flex;
+    align-items: center;
+    background: #EFEFEF;
+    border-radius: 999px;
+    padding: 8px 16px;
+    min-width: 200px;
+    flex: 1;
+    max-width: 400px;
+}
+
+.searchInput {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+}
+
+.searchIcon {
+    margin-right: 6px;
+    opacity: 0.6;
+}
+
+.userBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #F39C12;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: 12px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.iconCircle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #fff;
+    color: #F39C12;
+    display: grid;
+    place-items: center;
+    font-size: 14px;
+}
+
+.card {
+    width: 90%;
+    max-width: 1400px;
+    min-height: 80vh;
+    background: #FFEEDA;
+    border-radius: 59px;
+    display: flex;
+    box-sizing: border-box;
+    margin: 0 auto 32px;
+    flex-direction: column;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    margin: 16px 0 24px;
+    color: #333;
+}
+
+.cardBox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4%;
+    justify-content: center;
+}
+
+.profileSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 24px;
+}
+
+.profileBox {
+    width: 50%;
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    padding: 16px 0;
+}
+
+.profileImg {
+    width: 70%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10%;
+    margin-bottom: 8px;
+}
+
+.greeting {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    color: #000;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 4px 0 0;
+    color: #000;
+    text-align: center;
+}
+
+.infoBlock {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #000;
+    padding: 0 10px;
+}
+
+.formSection {
+    flex: 1;
+    min-width: 300px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.formCol {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.input {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #000;
+    box-sizing: border-box;
+}
+
+.btnRow {
+    display: flex;
+    gap: 16px;
+    margin-top: 20px;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.btn {
+    border: none;
+    border-radius: 24px;
+    padding: 12px 32px;
+    font-size: 1rem;
+    cursor: pointer;
+    min-width: 140px;
+}
+
+.cancel {
+    background: #c6c6c6;
+    color: #fff;
+}
+
+.save {
+    background: #f39c12;
+    color: #fff;
+}
+
+.admin {
+    background: #f39c12;
+    color: #fff;
+    margin-top: 24px;
+    border: none;
+    border-radius: 24px;
+    padding: 12px 32px;
+    font-size: 1rem;
+    cursor: pointer;
+    align-self: center;
+    min-width: 240px;
+}

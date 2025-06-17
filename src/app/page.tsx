@@ -1,66 +1,44 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { Box } from '@mui/material';
-import Hero from '@/components/Hero';
-import Filters from '@/components/Filters';
-import Catalog from '@/components/Catalog';
-import Ranking from '@/components/Ranking';
+import React, { useState } from "react";
+import { Box } from "@mui/material";
+import Hero from "@/components/Hero";
+import Filters from "@/components/Filters";
+import Catalog from "@/components/Catalog";
+import Ranking from "@/components/Recommended";
+import LastRead from "@/components/LastRead";
+import { BOOKS } from "@/utils/constants";
 
 function App() {
-  const genres = ['Todos', 'Suspense', 'Drama', 'Ficção'];
-  const [selectedGenre, setSelectedGenre] = useState('Todos');
+  const genres = ["Todos", "Suspense", "Drama", "Ficção"];
+  const [selectedGenre, setSelectedGenre] = useState("Todos");
 
   const handleSelectedGenre = (genre: string) => {
     setSelectedGenre(genre);
   };
 
-  const catalogItems = [
-    {
-      title: 'A menina que roubava livros',
-      author: 'Markus Zusak',
-      genre: 'Drama',
-      img: 'https://m.media-amazon.com/images/I/61L+4OBhm-L.jpg',
-    },
-    {
-      title: 'Biblioteca da Meia-Noite',
-      author: 'CS Lewis',
-      genre: 'Ficção',
-      img: 'https://m.media-amazon.com/images/I/81t2CVWEsUL.jpg',
-    },
-    {
-      title: 'O Senhor dos Anéis',
-      author: 'J.R.R. Tolkien',
-      genre: 'Ficção',
-      img: 'https://m.media-amazon.com/images/I/81KGUQ+PMgL._AC_UF1000,1000_QL80_.jpg',
-    },
-    {
-      title: 'O Código Da Vinci',
-      author: 'Dan Brown',
-      genre: 'Suspense',
-      img: 'https://m.media-amazon.com/images/I/91QSDmqQdaL._AC_UF1000,1000_QL80_.jpg',
-    },
-  ];
-
   return (
     <Box
       sx={{
-        display: 'flex',
+        display: "flex",
         gap: 2,
-        flexDirection: { xs: 'column', lg: 'row' },
+        flexDirection: { xs: "column", lg: "row" },
       }}
     >
       <Box sx={{ maxWidth: 768 }}>
         <Hero
-          title='Percy Jackson'
-          subtitle='A coletânea Percy Jackson e os Olimpianos acompanha um adolescente que descobre ser filho de um deus grego que, entre monstros, profecias e heróis, ele precisa salvar o mundo moderno da fúria dos deuses antigos.'
+          title={BOOKS[0].title}
+          subtitle={BOOKS[0].description}
+          bookId={BOOKS[0].id}
+          imageAlt={BOOKS[0].title}
+          imageSrc={BOOKS[0].img}
         />
+        <LastRead books={BOOKS.slice(0, 5)} selectedGenre={selectedGenre} />
         <Filters
-          genres={genres}
           selectedGenre={selectedGenre}
           handleSelectedGenre={handleSelectedGenre}
         />
-        <Catalog books={catalogItems} selectedGenre={selectedGenre} />
+        <Catalog books={BOOKS} selectedGenre={selectedGenre} />
       </Box>
       <Ranking />
     </Box>

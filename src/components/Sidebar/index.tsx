@@ -6,7 +6,6 @@ import Suggestions from '../Forms/suggestions';
 const Sidebar = () => {
   const [MenuBookOpen, setMenuBookOpen] = useState(false);
   return (
-    // <Grid item xs={1.5}>
     <Box
       sx={{
         display: 'flex',
@@ -31,7 +30,6 @@ const Sidebar = () => {
         <Bookmark />
       </IconButton>
     </Box>
-    //  </Grid>
   );
 };
 
