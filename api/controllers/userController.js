@@ -127,4 +127,4 @@ async function resetPassword(req, res) {
   }
 }
 
-module.exports = { getAllUsers, createUser, login, createToken, resetPassword };
+module.exports = { createUser, login, createToken, resetPassword };

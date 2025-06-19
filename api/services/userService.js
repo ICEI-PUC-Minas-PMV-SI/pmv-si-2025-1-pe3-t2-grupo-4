@@ -3,11 +3,6 @@ const bcrypt = require('bcrypt');
 const pool = require('../db');
 const { hash } = require('crypto');
 
-async function getUsers() {
-  const result = await pool.query('SELECT * FROM le_livros.usuarios');
-  return result.rows;
-}
-
 async function createToken(user_id, token) {
   const result = await pool.query(
     'INSERT INTO le_livros.tokens (token,usuario_id ,token_utilizado) VALUES ($1, $2, $3) RETURNING *',
@@ -79,7 +74,6 @@ async function createUser(user) {
 }
 
 module.exports = {
-  getUsers,
   createUser,
   getUserByEmail,
   createToken,
