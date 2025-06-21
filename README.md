@@ -9,7 +9,6 @@
 ## Integrantes
 
 * ALLAN DOS ANJOS VIANA
-* DANILO LEAL RAUL
 * JOÃO DE SOUSA LOURENÇO
 * MARCO TULIO CRECENCIO ARAUJO
 * MARIANA CARVALHO SILVA RIBEIRO
@@ -17,7 +16,7 @@
 
 ## Orientador
 
-* Maria Inês Lage de Paula 
+* Maria Inês Lage de Paula
 
 # Planejamento
 
