@@ -31,11 +31,12 @@ async function createBook(req, res) {
     !req.body.autor ||
     !req.body.editora ||
     !req.body.genero ||
-    !req.body.link
+    !req.body.link ||
+    !req.body.capa
   ) {
     return res.status(400).json({
       error:
-        'All fields are necessery: titulo, autor, editora, genero, detalhes, link.',
+        'All fields are necessery: titulo, autor, editora, genero, detalhes, link, capa.',
     });
   }
   try {
@@ -58,11 +59,12 @@ async function updateBook(req, res) {
     !req.body.autor ||
     !req.body.editora ||
     !req.body.genero ||
-    !req.body.link
+    !req.body.link ||
+    !req.body.capa
   ) {
     return res.status(400).json({
       error:
-        'All fields are necessery: titulo, autor, editora, genero, detalhes, link.',
+        'All fields are necessery: titulo, autor, editora, genero, detalhes, link,capa.',
     });
   }
   try {

@@ -14,19 +14,19 @@ async function getBookById(bookId) {
 }
 
 async function createBook(bookData) {
-  const { titulo, autor, editora, genero, detalhes, link } = bookData;
+  const { titulo, autor, editora, genero, detalhes, link, capa } = bookData;
   const result = await pool.query(
     'INSERT INTO le_livros.livros (titulo, autor, editora, genero,detalhes, link) VALUES ($1, $2, $3, $4,$5,$6) RETURNING *',
-    [titulo, autor, editora, genero, detalhes, link]
+    [titulo, autor, editora, genero, detalhes, link, capa]
   );
   return result.rows[0];
 }
 
 async function updateBook(bookId, bookData) {
-  const { titulo, autor, editora, genero, detalhes, link } = bookData;
+  const { titulo, autor, editora, genero, detalhes, link, capa } = bookData;
   const result = await pool.query(
-    'UPDATE le_livros.livros SET titulo = $1, autor = $2, editora = $3, genero = $4, detalhes = $5, link = $6 WHERE id = $7 RETURNING *',
-    [titulo, autor, editora, genero, detalhes, link, bookId]
+    'UPDATE le_livros.livros SET titulo = $1, autor = $2, editora = $3, genero = $4, detalhes = $5, link = $6, capa = $7 WHERE id = $8 RETURNING *',
+    [titulo, autor, editora, genero, detalhes, link, capa, bookId]
   );
   return result.rows[0];
 }
