@@ -19,7 +19,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(cors());
+app.options('*', cors());
 
 app.use('/user', userRoutes);
 app.use('/book', bookRoutes);
