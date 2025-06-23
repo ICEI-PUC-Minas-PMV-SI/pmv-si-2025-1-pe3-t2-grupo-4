@@ -7,6 +7,25 @@ const app = express();
 
 app.use(express.json());
 
+const allowedOrigins = [
+  'https://leitura-livre.netlify.app/',
+  'http://localhost:3000', // útil em dev local
+];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+    credentials: true, // se estiver usando cookies
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  })
+);
+
 app.use((req, res, next) => {
   const apiKey = req.headers['x-access-key'];
 
