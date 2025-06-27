@@ -16,7 +16,7 @@ async function getBookById(bookId) {
 async function createBook(bookData) {
   const { titulo, autor, editora, genero, detalhes, link, capa } = bookData;
   const result = await pool.query(
-    'INSERT INTO le_livros.livros (titulo, autor, editora, genero,detalhes, link) VALUES ($1, $2, $3, $4,$5,$6) RETURNING *',
+    'INSERT INTO le_livros.livros (titulo, autor, editora, genero,detalhes, link,capa) VALUES ($1, $2, $3, $4,$5,$6,$7) RETURNING *',
     [titulo, autor, editora, genero, detalhes, link, capa]
   );
   return result.rows[0];
