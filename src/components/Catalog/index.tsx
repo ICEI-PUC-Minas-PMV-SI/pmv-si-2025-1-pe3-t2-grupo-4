@@ -3,11 +3,12 @@ import { useRouter } from "next/navigation";
 
 type Book = {
   id: string;
-  title: string;
-  author: string;
-  genre: string;
-  img: string;
-  file: string;
+  titulo: string;
+  autor: string;
+  genero: string;
+  detalhes: string;
+  link: string;
+  capa: string;
 };
 
 type Props = {
@@ -27,18 +28,18 @@ const Catalog = ({ books, selectedGenre }: Props) => {
       alignItems={{ xs: "center" }}
     >
       {books
-        .filter((book) =>
-          selectedGenre === "Todos" ? true : book.genre === selectedGenre,
+        ?.filter((book) =>
+          selectedGenre === "Todos" ? true : book.genero === selectedGenre,
         )
-        .map((book, i) => (
+        ?.map((book, i) => (
           <Grid key={i} size={6}>
             <Box key={i}>
               <Paper elevation={3} sx={{ p: 2, borderRadius: 3 }}>
                 <Box sx={{ display: "flex", gap: 1 }}>
                   <Grid size={6}>
                     <img
-                      src={book.img}
-                      alt={book.title}
+                      src={book.capa}
+                      alt={book.titulo}
                       style={{
                         width: 125,
                         height: 200,
@@ -58,9 +59,9 @@ const Catalog = ({ books, selectedGenre }: Props) => {
                     >
                       <Box>
                         <Typography fontWeight="bold" fontSize={14}>
-                          {book.title}
+                          {book.titulo}
                         </Typography>
-                        <Typography variant="caption">{book.author}</Typography>
+                        <Typography variant="caption">{book.autor}</Typography>
                       </Box>
                       <Stack direction="column" mb={1}>
                         <Button

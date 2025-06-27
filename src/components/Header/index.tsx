@@ -11,7 +11,8 @@ import {
   Typography,
 } from "@mui/material";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 interface UserMenuProps {
   user: { name: string; avatarUrl?: string } | null;
@@ -27,6 +28,7 @@ const Header = ({
   onLoginClick: () => void;
 }) => {
   const router = useRouter();
+  const pathname = usePathname();
 
   return (
     <Box
@@ -70,18 +72,20 @@ const Header = ({
           </Typography>
         </Box>
       </Box>
-      <Box>
-        <Input
-          id="input-with-icon-adornment"
-          startAdornment={
-            <InputAdornment position="start">
-              <Search />
-            </InputAdornment>
-          }
-          disableUnderline
-          sx={{ backgroundColor: "#F0F0F0", padding: 1, borderRadius: 6 }}
-        />
-      </Box>
+      {pathname !== "/" && (
+        <Box>
+          <Input
+            id="input-with-icon-adornment"
+            startAdornment={
+              <InputAdornment position="start">
+                <Search />
+              </InputAdornment>
+            }
+            disableUnderline
+            sx={{ backgroundColor: "#F0F0F0", padding: 1, borderRadius: 6 }}
+          />
+        </Box>
+      )}
       {user ? (
         <Avatar
           sx={{
@@ -94,7 +98,7 @@ const Header = ({
           }}
         >
           <AccountCircle />
-          Usuário
+          {user.nome || "Usuário"}
         </Avatar>
       ) : (
         <>

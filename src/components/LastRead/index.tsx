@@ -6,11 +6,12 @@ import { useRouter } from "next/navigation";
 
 type Book = {
   id: string;
-  title: string;
-  author: string;
-  genre: string;
-  img: string;
-  file: string;
+  titulo: string;
+  autor: string;
+  genero: string;
+  detalhes: string;
+  link: string;
+  capa: string;
 };
 
 type Props = {
@@ -37,7 +38,7 @@ const LastRead = ({ books, selectedGenre }: Props) => {
         style={{ width: "100%", padding: "16px 0" }}
         navigation={true}
       >
-        {books.map((book, i) => (
+        {books?.slice(1, 5).map((book, i) => (
           <SwiperSlide
             key={i}
             style={{
@@ -63,8 +64,8 @@ const LastRead = ({ books, selectedGenre }: Props) => {
               <Box sx={{ display: "flex", gap: 1 }}>
                 <Grid size={6}>
                   <img
-                    src={book.img}
-                    alt={book.title}
+                    src={book.capa}
+                    alt={book.titulo}
                     style={{
                       width: 80,
                       height: 120,
@@ -84,9 +85,9 @@ const LastRead = ({ books, selectedGenre }: Props) => {
                   >
                     <Box>
                       <Typography fontWeight="bold" fontSize={14}>
-                        {book.title}
+                        {book.titulo}
                       </Typography>
-                      <Typography variant="caption">{book.author}</Typography>
+                      <Typography variant="caption">{book.autor}</Typography>
                     </Box>
                   </Box>
                 </Grid>

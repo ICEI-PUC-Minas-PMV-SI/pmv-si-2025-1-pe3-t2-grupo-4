@@ -1,10 +1,11 @@
 "use client";
 
 import PdfReader from "@/components/PdfReader";
+import { useGetBookById } from "@/queries/book";
 import { BOOKS } from "@/utils/constants";
 import { Box, Typography } from "@mui/material";
 import { useSearchParams } from "next/navigation";
-import { Suspense, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 
 export default function Leitura() {
   const searchParams = useSearchParams();
@@ -13,7 +14,9 @@ export default function Leitura() {
 
   const selectedBook = BOOKS.find((book) => book.id === selectedBookId);
 
-  if (!selectedBook) {
+  const { data: bookData, isLoading } = useGetBookById(selectedBookId || "");
+
+  if (!bookData && !isLoading) {
     return (
       <Box
         sx={{
@@ -41,9 +44,7 @@ export default function Leitura() {
           width: "85%",
         }}
       >
-        <PdfReader
-          pdfUrl={`${process.env.NEXT_PUBLIC_URL}/${selectedBook?.file}`}
-        />
+        {!isLoading && <PdfReader pdfUrl={bookData?.link || ""} />}
       </Box>
     </Suspense>
   );
